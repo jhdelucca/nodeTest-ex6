@@ -1,4 +1,3 @@
-
 Você foi solicitado a desenvolver uma API que contenha os seguintes critérios listados abaixo. Na reunião de alinhamento técnico, foi ​sugerido​ que você utilizasse a metodologia TDD para odesenvolvimento, e portanto foram levantados os seguintes requisitos:
 
 ●Um get na rota /products deverá listar um array de produtos;

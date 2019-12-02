@@ -18,7 +18,7 @@ describe('Products Route', function () {
     describe('get() function', function () {
         it('should return object with title ', function () {
             get(req, res);
-            expect(res.jsonCalledWith).to.be.eql({ title: 'Products page' });
+            expect(res.jsonCalledWith).to.be.have.key('getReceive');
         });
 
         it('should receive return by id ', function () {
@@ -37,11 +37,11 @@ describe('Products Route', function () {
             const getReq = req;
             getReq.body = {
                 description: "Product3 description",
-                price: 49
+                price: 0
             };
 
             post(getReq, res);
-            expect(res.jsonCalledWith).to.be.have.key('insertSucess')
+            expect(res.jsonCalledWith).to.be.have.key('successInsert')
 
         })
     });

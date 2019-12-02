@@ -19,10 +19,10 @@ let products = {
 module.exports = {
     get(_, res) {
         // res.json({ title: 'Products page' });
-        res.json(products.items);
+        res.json({getReceive: products.items});
     },
     getById(req, res) {
-        if (!req.params.id) {
+        if (!req.params.description) {
             res.json({ error: 'Should receive an id' })
         }
         //res.json({ success: 'Id received!!!' })
@@ -38,9 +38,9 @@ module.exports = {
 
     },
     post(req, res) {
-
-        if (req.body.description.length < 10) {
-            res.json({ erro: "descricao tem menos que 10 caracteres" });
+      // res.send(req.body.price);
+         if (req.body.description.length < 10 || req.body.price <= 0) {
+            res.json({ erro: "descricao tem menos que 10 caracteres ou preço menor/igual a zero" });
         } else {
             products.items.push(req.body)
             res.json({ successInsert: "produto inserido com sucesso!" });
