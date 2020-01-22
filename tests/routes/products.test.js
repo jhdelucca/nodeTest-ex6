@@ -24,7 +24,7 @@ describe('Products Route', function () {
         it('should receive return by id ', function () {
             const getReq = req;
             getReq.params = {
-                id: 1
+                id: 10
             };
 
             getById(getReq, res);
@@ -37,7 +37,7 @@ describe('Products Route', function () {
             const getReq = req;
             getReq.body = {
                 description: "Product3 description",
-                price: 0
+                price: 49
             };
 
             post(getReq, res);
