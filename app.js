@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-var whitelist = ['https://teste-node-heroku.herokuapp.com', 'http://example2.com']
+var whitelist = ['https://teste-node-heroku.herokuapp.com', 'http://localhost:3000/']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
