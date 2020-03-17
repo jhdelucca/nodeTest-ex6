@@ -22,9 +22,9 @@ module.exports = {
         res.json({getReceive: products.items});
     },
     getById(req, res) {
-        if (!req.params.description) {
+       /**  if (!req.params.description) {
             res.json({ error: 'Should receive an id' })
-        }
+        }*/
         //res.json({ success: 'Id received!!!' })
         for (var i = 0; i < products.items.length; i++) {
 
